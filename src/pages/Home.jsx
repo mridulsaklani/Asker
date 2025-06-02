@@ -35,7 +35,7 @@ const Home = () => {
     } catch (error) {
       setMessages((prev) => [
         ...prev,
-        { role: 'bot', content: 'Error generating response.' },
+        { role: 'bot', content: 'Error generating response. Refresh me and try again' },
       ]);
     } finally {
       setLoading(false);
