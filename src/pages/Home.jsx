@@ -50,8 +50,12 @@ const Home = () => {
   };
 
   return (
-    <div className="flex flex-col items-center bg-gray-100 p-4">
-      <div className="w-full max-w-3xl bg-white shadow-xl rounded-xl flex flex-col h-[80vh] overflow-hidden">
+    
+    <div className="flex items-center gap-6 p-4 max-w-7xl mx-auto ">
+      <div className="w-1/3 h-full ">
+      <h1>hii</h1>
+      </div>
+      <div className=" w-2/3 bg-white shadow-xl rounded-xl flex flex-col h-[80vh] overflow-hidden">
         <div className="flex-1 p-4 overflow-y-auto space-y-4">
           {messages.map((msg, index) => (
             <div
