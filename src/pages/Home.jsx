@@ -29,7 +29,7 @@ const Home = () => {
       });
 
       if (response.status === 200) {
-        const botMessage = { role: 'bot', content: response.data?.res || 'No response' };
+        const botMessage = { role: 'bot', content: response.data?.steps.pop() || 'No response' };
         setMessages((prev) => [...prev, botMessage]);
       }
     } catch (error) {
@@ -51,9 +51,11 @@ const Home = () => {
 
   return (
     
-    <div className="flex items-center gap-6 p-4 max-w-7xl mx-auto ">
+    <div className="flex items-start gap-6 p-4 max-w-7xl mx-auto ">
       <div className="w-1/3 h-full ">
-      <h1>hii</h1>
+      <div className='border-1 border-stone-300 rounded-lg w-full h-full p-8 py-45 bg-white flex items-center justify-center'>
+        <h2><span className='text-red-500 text-xl font-semibold'>*</span>Feature is under development</h2>
+      </div>
       </div>
       <div className=" w-2/3 bg-white shadow-xl rounded-xl flex flex-col h-[80vh] overflow-hidden">
         <div className="flex-1 p-4 overflow-y-auto space-y-4">
