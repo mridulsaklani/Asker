@@ -9,3 +9,19 @@ body{
     background-color: #F3F4F6;
     font-family: "Open Sans", sans-serif;
 }
+
+
+.chatbot a{
+    color: blue;
+    text-decoration: underline;
+
+}
+
+.chatbot h1,h2,h3,h4,h5,h6{
+    font-weight: 700;
+
+}
+
+.chatbot li{
+    list-style: disc;
+}

@@ -3,6 +3,7 @@ import api from '../components/api';
 
 import { GoUnmute } from "react-icons/go";
 import { IoVolumeMuteOutline } from "react-icons/io5";
+import parse from 'html-react-parser';
 
 const Home = () => {
   const [messages, setMessages] = useState([]);
@@ -87,13 +88,13 @@ const [isMuted, setIsMuted] = useState(false);
           {messages.map((msg, index) => (
             <div
               key={index}
-              className={`p-3 rounded-lg max-w-[80%] ${
+              className={`p-3 rounded-lg max-w-[80%] chatbot ${
                 msg.role === 'user'
                   ? 'bg-blue-500 text-white self-end ml-auto'
                   : 'bg-gray-200 text-gray-900 self-start mr-auto'
               }`}
             >
-              {msg.content}
+              {parse(msg.content)}
             </div>
           ))}
           {loading && (
